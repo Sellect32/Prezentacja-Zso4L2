@@ -1,124 +1,152 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f0f2f5;
+margin: 0;
+font-family: "Segoe UI", sans-serif;
+background: #0f172a;
+color: #e2e8f0;
 }
 
-/* Меню */
+/* NAV */
 nav {
-    background: #2c3e50;
-    text-align: center;
-    padding: 20px;
+position: sticky;
+top: 0;
+background: rgba(15,23,42,0.75);
+backdrop-filter: blur(10px);
+text-align: center;
+padding: 10px;
+z-index: 10;
 }
 
-nav h1 {
-    color: white;
-    margin-bottom: 10px;
+nav input {
+padding: 6px;
+border-radius: 6px;
+border: none;
+width: 160px;
+opacity: 0.7;
+transition: 0.3s;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+nav input:focus {
+opacity: 1;
+width: 220px;
 }
 
-nav a:hover {
-    color: #f1c40f;
+/* LINKS */
+.links a {
+color: #94a3b8;
+margin: 0 8px;
+font-size: 13px;
+text-decoration: none;
+transition: 0.3s;
+display: inline-block;
 }
 
-/* Контент */
+.links a:hover {
+color: #38bdf8;
+transform: translateY(-2px);
+}
+
+/* CONTAINER */
 .container {
-    padding: 20px;
+padding: 20px;
+max-width: 1000px;
+margin: auto;
 }
 
-/* Карточки */
+/* CARD */
 .card {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: 0.3s;
+background: rgba(30,41,59,0.7);
+padding: 20px;
+margin: 20px 0;
+border-radius: 14px;
+
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.9s ease;
 }
 
-.card:hover {
-    transform: scale(1.02);
+.card.show {
+opacity: 1;
+transform: translateY(0);
 }
 
-.content {
-    flex: 1;
+.card.hide {
+opacity: 0;
+transform: translateY(-30px);
 }
 
-/* Картинка справа */
-.img-wrapper {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    margin-left: 20px;
-    transition: width 0.4s ease, height 0.4s ease;
-    cursor: pointer;
+/* TEXT */
+.extra {
+margin-top: 10px;
+opacity: 0.85;
 }
 
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    transition: transform 0.4s ease;
-    transform-origin: right center;
-}
-
-/* Эффект при наведении на карточку */
-.card:hover .img-wrapper {
-    width: 220px;      /* увеличили ширину */
-    height: 180px;     /* увеличили высоту */
-}
-
-.card:hover .img-wrapper img {
-    transform: scale(1.6); /* увеличили масштаб картинки */
-}
-
-/* Скрытый текст */
-.extra,
 .dzialania {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    overflow: hidden;
-    transition: all 0.5s ease;
-    margin-top: 10px;
+margin-top: 12px;
+border-top: 1px solid rgba(255,255,255,0.1);
+padding-top: 10px;
 }
 
-.card:hover .extra,
-.card:hover .dzialania {
-    max-height: 300px;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Стили действий */
-.dzialania h3 {
-    margin-bottom: 5px;
-}
-
-.dzialania ul {
-    padding-left: 20px;
-    margin: 0;
-}
-
-/* Футер */
+/* FOOTER */
 footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
+text-align: center;
+padding: 20px;
+background: #020617;
+color: #64748b;
+}
+
+/* ========================= */
+/* 📱 MOBILE ADAPTATION */
+/* ========================= */
+@media (max-width: 768px) {
+
+nav {
+    padding: 12px 8px;
+}
+
+nav input {
+    width: 90%;
+    margin-top: 8px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.links a {
+    font-size: 12px;
+    margin: 4px;
+}
+
+/* cards smaller spacing */
+.container {
+    padding: 12px;
+}
+
+.card {
     padding: 15px;
+    margin: 12px 0;
+    border-radius: 12px;
+}
+
+/* text smaller */
+.card h2 {
+    font-size: 18px;
+}
+
+.card p, .extra p, li {
+    font-size: 14px;
+}
+
+/* smoother animation on mobile (less movement) */
+.card {
+    transform: translateY(25px);
+}
+
+.card.hide {
+    transform: translateY(-15px);
+}
 }

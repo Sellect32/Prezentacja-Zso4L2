@@ -1,111 +1,126 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <title>Zagrożenia naturalne</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<title>Zagrożenia naturalne</title>
+<link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <nav>
-    <h1>Zagrożenia naturalne</h1>
-    <a href="#trzesienia">Trzęsienia ziemi</a>
-    <a href="#powodzie">Powodzie</a>
-    <a href="#pozary">Pożary</a>
-    <a href="#huragany">Huragany</a>
+    <div class="title">Zagrożenia naturalne</div>
+
+    <input id="search" type="text" placeholder="szukaj..." />
+
+    <div class="links">
+        <a href="#trzesienia">Trzęsienia</a>
+        <a href="#powodzie">Powodzie</a>
+        <a href="#pozary">Pożary</a>
+        <a href="#huragany">Huragany</a>
+    </div>
 </nav>
 
 <div class="container">
 
-    <section id="trzesienia" class="card">
-        <div class="content">
-            <h2>Trzęsienia ziemi</h2>
-            <p>Powstają przez ruchy płyt tektonicznych.</p>
-            <div class="extra">
-                <p>Mogą powodować zawalenie budynków i ogromne straty w ludziach.</p>
-            </div>
-            <div class="dzialania">
-                <h3>Co robić?</h3>
-                <ul>
-                    <li>zachować spokój i stosować punkty niżej</li>
-                    <li>Unikać okien i ciężkich przedmiotów.</li>
-                    <li>Nie wybiegaj z budynku w trakcie drgań. Na zewnątrz odejdź na otwartą przestrzeń z dala od zabudowań.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="img-wrapper">
-            <img src="image/destroi.png" alt="Trzęsienia ziemi" />
-        </div>
-    </section>
+<section class="card" id="trzesienia">
+<h2>Trzęsienia ziemi</h2>
+<p>Trzęsienia ziemi to nagłe wstrząsy powierzchni Ziemi spowodowane ruchem płyt tektonicznych.</p>
 
-    <section id="powodzie" class="card">
-        <div class="content">
-            <h2>Powodzie</h2>
-            <p>Występują przy nadmiarze wody.</p>
-            <div class="extra">
-                <p>Powodzie niszczą domy, drogi i uprawy oraz zmuszają ludzi do ewakuacji.</p>
-            </div>
-            <div class="dzialania">
-                <h3>Co robić?</h3>
-                <ul>
-                    <li>Przenieść się na wyższe piętro lub w bezpieczne miejsce.</li>
-                    <li>Unikać kontaktu z wodą powodziową.</li>
-                    <li>Śledzić komunikaty lokalnych władz i ewakuować się w razie potrzeby.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="img-wrapper">
-            <img src="image/nawodnienie.jpg" alt="Powodzie" />
-        </div>
-    </section>
+<div class="extra">
+<p>📌 Występują głównie na granicach płyt tektonicznych</p>
+<p>📌 Mogą mieć różną siłę – od słabych do katastrofalnych</p>
+<p>📌 Mogą powodować zawalenia budynków i osuwiska ziemi</p>
+<p>📌 Często występują wstrząsy wtórne</p>
+<p>📌 Mogą wywoływać tsunami pod oceanem</p>
+</div>
 
-    <section id="pozary" class="card">
-        <div class="content">
-            <h2>Pożary lasów</h2>
-            <p>Powstają przez suszę lub działalność człowieka.</p>
-            <div class="extra">
-                <p>Pożary niszczą ogromne obszary lasów i zagrażają zwierzętom oraz ludziom.</p>
-            </div>
-            <div class="dzialania">
-                <h3>Co robić?</h3>
-                <ul>
-                    <li>Opuszczać teren objęty pożarem.</li>
-                    <li>Zamykać drzwi i okna, aby nie przedostawał się dym.</li>
-                    <li>Śledzić instrukcje straży pożarnej i władz lokalnych.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="img-wrapper">
-            <img src="image/pozar.jpg" alt="Pożary lasów" />
-        </div>
-    </section>
+<div class="dzialania">
+<h3>Co robić?</h3>
+<ul>
+<li>Schowaj się pod stabilnym meblem</li>
+<li>Trzymaj się z dala od okien</li>
+<li>Nie używaj windy</li>
+<li>Wyjdź na otwartą przestrzeń po wstrząsach</li>
+</ul>
+</div>
+</section>
 
-    <section id="huragany" class="card">
-        <div class="content">
-            <h2>Huragany</h2>
-            <p>Silne burze z bardzo mocnym wiatrem.</p>
-            <div class="extra">
-                <p>Huragany osiągają bardzo duże prędkości i powodują powodzie oraz zniszczenia budynków.</p>
-            </div>
-            <div class="dzialania">
-                <h3>Co robić?</h3>
-                <ul>
-                    <li>Schować się w bezpiecznym, wewnętrznym pomieszczeniu.</li>
-                    <li>Unikać przebywania na zewnątrz i w pobliżu okien.</li>
-                    <li>Śledzić prognozy pogody i ostrzeżenia lokalne.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="img-wrapper">
-            <img src="image/huragan.png" alt="Huragany" />
-        </div>
-    </section>
+<section class="card" id="powodzie">
+<h2>Powodzie</h2>
+<p>Powodzie to zalanie terenów przez nadmiar wody.</p>
+
+<div class="extra">
+<p>📌 Powstają po intensywnych opadach deszczu</p>
+<p>📌 Mogą być skutkiem topnienia śniegu</p>
+<p>📌 Niszczy domy, drogi i pola uprawne</p>
+<p>📌 Często prowadzą do ewakuacji ludzi</p>
+<p>📌 Woda może być silnie zanieczyszczona</p>
+</div>
+
+<div class="dzialania">
+<h3>Co robić?</h3>
+<ul>
+<li>Przenieś się na wyższe piętro</li>
+<li>Odłącz prąd i gaz</li>
+<li>Nie wchodź do wody</li>
+<li>Śledź komunikaty służb</li>
+</ul>
+</div>
+</section>
+
+<section class="card" id="pozary">
+<h2>Pożary lasów</h2>
+<p>Pożary to niekontrolowane rozprzestrzenianie się ognia w naturze.</p>
+
+<div class="extra">
+<p>📌 Powstają przez człowieka lub suszę</p>
+<p>📌 Rozprzestrzeniają się bardzo szybko</p>
+<p>📌 Dym jest toksyczny dla ludzi i zwierząt</p>
+<p>📌 Niszczy całe ekosystemy</p>
+<p>📌 Trudne do opanowania</p>
+</div>
+
+<div class="dzialania">
+<h3>Co robić?</h3>
+<ul>
+<li>Natychmiast opuść teren</li>
+<li>Zamknij okna</li>
+<li>Zakryj nos i usta</li>
+<li>Słuchaj służb ratunkowych</li>
+</ul>
+</div>
+</section>
+
+<section class="card" id="huragany">
+<h2>Huragany</h2>
+<p>Huragany to bardzo silne burze z ekstremalnym wiatrem.</p>
+
+<div class="extra">
+<p>📌 Wiatr może przekraczać 200 km/h</p>
+<p>📌 Powodują powodzie sztormowe</p>
+<p>📌 Niszczy budynki i infrastrukturę</p>
+<p>📌 Tworzą się nad ciepłymi oceanami</p>
+<p>📌 Mogą trwać kilka dni</p>
+</div>
+
+<div class="dzialania">
+<h3>Co robić?</h3>
+<ul>
+<li>Zostań w bezpiecznym miejscu</li>
+<li>Unikaj okien</li>
+<li>Przygotuj zapasy</li>
+<li>Śledź prognozy pogody</li>
+</ul>
+</div>
+</section>
 
 </div>
 
 <footer>
-    <p>© 2026 Zagrożenia naturalne by David Lebediev ©</p>
+<p>© 2026 Zagrożenia naturalne</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
